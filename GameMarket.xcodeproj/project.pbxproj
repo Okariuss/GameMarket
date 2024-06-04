@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB8DC6B22C0E4A6300A5E4F6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DC6B12C0E4A6300A5E4F6 /* Endpoint.swift */; };
+		EB8DC6B42C0E52ED00A5E4F6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DC6B32C0E52ED00A5E4F6 /* NetworkManager.swift */; };
+		EB8DC6B92C0E584F00A5E4F6 /* Weakifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DC6B82C0E584F00A5E4F6 /* Weakifiable.swift */; };
 		EBFF2D3F2C0CFC4A006288ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF2D3E2C0CFC4A006288ED /* AppDelegate.swift */; };
 		EBFF2D412C0CFC4A006288ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFF2D402C0CFC4A006288ED /* SceneDelegate.swift */; };
 		EBFF2D492C0CFC4A006288ED /* GameMarket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBFF2D472C0CFC4A006288ED /* GameMarket.xcdatamodeld */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB8DC6B12C0E4A6300A5E4F6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		EB8DC6B32C0E52ED00A5E4F6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EB8DC6B82C0E584F00A5E4F6 /* Weakifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weakifiable.swift; sourceTree = "<group>"; };
 		EBFF2D3B2C0CFC4A006288ED /* GameMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFF2D3E2C0CFC4A006288ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBFF2D402C0CFC4A006288ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +88,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB8DC6B02C0E4A4700A5E4F6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EB8DC6B12C0E4A6300A5E4F6 /* Endpoint.swift */,
+				EB8DC6B32C0E52ED00A5E4F6 /* NetworkManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EB8DC6B52C0E582A00A5E4F6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EB8DC6B82C0E584F00A5E4F6 /* Weakifiable.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		EBFF2D322C0CFC4A006288ED = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +201,8 @@
 		EBFF2D7C2C0D013A006288ED /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EB8DC6B52C0E582A00A5E4F6 /* Base */,
+				EB8DC6B02C0E4A4700A5E4F6 /* Service */,
 				EBFF2D7E2C0D01A8006288ED /* Constants */,
 				EBFF2D7D2C0D0144006288ED /* CoreData */,
 			);
@@ -330,8 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8DC6B42C0E52ED00A5E4F6 /* NetworkManager.swift in Sources */,
 				EBFF2D492C0CFC4A006288ED /* GameMarket.xcdatamodeld in Sources */,
+				EB8DC6B92C0E584F00A5E4F6 /* Weakifiable.swift in Sources */,
 				EBFF2D7A2C0D0093006288ED /* FavoriteScreenViewController.swift in Sources */,
+				EB8DC6B22C0E4A6300A5E4F6 /* Endpoint.swift in Sources */,
 				EBFF2D3F2C0CFC4A006288ED /* AppDelegate.swift in Sources */,
 				EBFF2D762C0D0045006288ED /* TabBarViewController.swift in Sources */,
 				EBFF2D802C0D01BE006288ED /* AppConstants.swift in Sources */,

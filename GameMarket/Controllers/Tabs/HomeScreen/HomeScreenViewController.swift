@@ -13,5 +13,17 @@ final class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         navigationItem.title = "Home"
+        testNetworkRequest()
+    }
+    
+    private func testNetworkRequest() {
+        Task {
+            do {
+                let data = try await NetworkManager.shared.request(endpoint: .getGames)
+                print("Data \(data)")
+            } catch {
+                print("Error \(error)")
+            }
+        }
     }
 }

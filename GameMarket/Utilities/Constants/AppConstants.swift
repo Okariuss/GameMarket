@@ -23,4 +23,11 @@ final class AppConstants {
             return (UIImage(systemName: rawValue)?.withRenderingMode(.alwaysOriginal).withTintColor(.white))!
         }
     }
+    
+    // MARK: Network Constants
+    enum NetworkConstants: String {
+        case baseURL = "https://api.rawg.io/api/"
+        case games = "games"
+        case apiKey = "?key=095b135847544fb481fa5083f7858961"
+    }
 }
