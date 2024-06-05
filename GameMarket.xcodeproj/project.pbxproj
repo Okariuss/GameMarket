@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB8AE0E82C1091A30006C1E3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0E72C1091A30006C1E3 /* Game.swift */; };
 		EB8DC6B22C0E4A6300A5E4F6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DC6B12C0E4A6300A5E4F6 /* Endpoint.swift */; };
 		EB8DC6B42C0E52ED00A5E4F6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DC6B32C0E52ED00A5E4F6 /* NetworkManager.swift */; };
 		EB8DC6B92C0E584F00A5E4F6 /* Weakifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DC6B82C0E584F00A5E4F6 /* Weakifiable.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB8AE0E72C1091A30006C1E3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		EB8DC6B12C0E4A6300A5E4F6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		EB8DC6B32C0E52ED00A5E4F6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EB8DC6B82C0E584F00A5E4F6 /* Weakifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weakifiable.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB8AE0E62C1091780006C1E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB8AE0E72C1091A30006C1E3 /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EB8DC6B02C0E4A4700A5E4F6 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +211,7 @@
 		EBFF2D7C2C0D013A006288ED /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EB8AE0E62C1091780006C1E3 /* Model */,
 				EB8DC6B52C0E582A00A5E4F6 /* Base */,
 				EB8DC6B02C0E4A4700A5E4F6 /* Service */,
 				EBFF2D7E2C0D01A8006288ED /* Constants */,
@@ -361,6 +372,7 @@
 				EBFF2D7A2C0D0093006288ED /* FavoriteScreenViewController.swift in Sources */,
 				EB8DC6B22C0E4A6300A5E4F6 /* Endpoint.swift in Sources */,
 				EBFF2D3F2C0CFC4A006288ED /* AppDelegate.swift in Sources */,
+				EB8AE0E82C1091A30006C1E3 /* Game.swift in Sources */,
 				EBFF2D762C0D0045006288ED /* TabBarViewController.swift in Sources */,
 				EBFF2D802C0D01BE006288ED /* AppConstants.swift in Sources */,
 				EBFF2D412C0CFC4A006288ED /* SceneDelegate.swift in Sources */,
