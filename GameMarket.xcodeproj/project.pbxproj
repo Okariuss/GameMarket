@@ -10,6 +10,8 @@
 		EB8AE0E82C1091A30006C1E3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0E72C1091A30006C1E3 /* Game.swift */; };
 		EB8AE0EA2C1096B10006C1E3 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0E92C1096B10006C1E3 /* AlertPresentable.swift */; };
 		EB8AE0F02C10985B0006C1E3 /* L10N.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0EF2C10985B0006C1E3 /* L10N.swift */; };
+		EB8AE0F22C1099820006C1E3 /* BaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0F12C1099820006C1E3 /* BaseViewControllerDelegate.swift */; };
+		EB8AE0F42C109A290006C1E3 /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0F32C109A290006C1E3 /* BaseViewModelDelegate.swift */; };
 		EB8DC6B22C0E4A6300A5E4F6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DC6B12C0E4A6300A5E4F6 /* Endpoint.swift */; };
 		EB8DC6B42C0E52ED00A5E4F6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DC6B32C0E52ED00A5E4F6 /* NetworkManager.swift */; };
 		EB8DC6B92C0E584F00A5E4F6 /* Weakifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DC6B82C0E584F00A5E4F6 /* Weakifiable.swift */; };
@@ -48,6 +50,8 @@
 		EB8AE0E72C1091A30006C1E3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		EB8AE0E92C1096B10006C1E3 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		EB8AE0EF2C10985B0006C1E3 /* L10N.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10N.swift; sourceTree = "<group>"; };
+		EB8AE0F12C1099820006C1E3 /* BaseViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerDelegate.swift; sourceTree = "<group>"; };
+		EB8AE0F32C109A290006C1E3 /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
 		EB8DC6B12C0E4A6300A5E4F6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		EB8DC6B32C0E52ED00A5E4F6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EB8DC6B82C0E584F00A5E4F6 /* Weakifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weakifiable.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 			children = (
 				EB8DC6B82C0E584F00A5E4F6 /* Weakifiable.swift */,
 				EB8AE0E92C1096B10006C1E3 /* AlertPresentable.swift */,
+				EB8AE0F12C1099820006C1E3 /* BaseViewControllerDelegate.swift */,
+				EB8AE0F32C109A290006C1E3 /* BaseViewModelDelegate.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -389,7 +395,9 @@
 				EB8AE0E82C1091A30006C1E3 /* Game.swift in Sources */,
 				EBFF2D762C0D0045006288ED /* TabBarViewController.swift in Sources */,
 				EBFF2D802C0D01BE006288ED /* AppConstants.swift in Sources */,
+				EB8AE0F42C109A290006C1E3 /* BaseViewModelDelegate.swift in Sources */,
 				EBFF2D412C0CFC4A006288ED /* SceneDelegate.swift in Sources */,
+				EB8AE0F22C1099820006C1E3 /* BaseViewControllerDelegate.swift in Sources */,
 				EB8AE0EA2C1096B10006C1E3 /* AlertPresentable.swift in Sources */,
 				EBFF2D782C0D0086006288ED /* HomeScreenViewController.swift in Sources */,
 				EB8AE0F02C10985B0006C1E3 /* L10N.swift in Sources */,
