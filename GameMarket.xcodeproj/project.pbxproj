@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB2C77162C11C69F004550CB /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C77152C11C69F004550CB /* Date+Ext.swift */; };
+		EB2C77182C120457004550CB /* GameBodyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C77172C120457004550CB /* GameBodyCollectionViewCell.swift */; };
+		EB2C771A2C120D36004550CB /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C77192C120D36004550CB /* CGFloat+Ext.swift */; };
+		EB2C771D2C121560004550CB /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C771C2C121560004550CB /* CircularProgressView.swift */; };
+		EB53D4532C1356E400997CC2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EB53D4522C1356E400997CC2 /* Kingfisher */; };
+		EB53D4582C13627D00997CC2 /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB53D4572C13627D00997CC2 /* UIFont+Ext.swift */; };
 		EB8AE0E82C1091A30006C1E3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0E72C1091A30006C1E3 /* Game.swift */; };
 		EB8AE0EA2C1096B10006C1E3 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0E92C1096B10006C1E3 /* AlertPresentable.swift */; };
 		EB8AE0F02C10985B0006C1E3 /* L10N.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0EF2C10985B0006C1E3 /* L10N.swift */; };
 		EB8AE0F22C1099820006C1E3 /* BaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0F12C1099820006C1E3 /* BaseViewControllerDelegate.swift */; };
 		EB8AE0F42C109A290006C1E3 /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0F32C109A290006C1E3 /* BaseViewModelDelegate.swift */; };
+		EB8AE0F72C109D590006C1E3 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0F62C109D590006C1E3 /* UIView+Ext.swift */; };
+		EB8AE0F92C109DB50006C1E3 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0F82C109DB50006C1E3 /* UIViewController+Ext.swift */; };
+		EB8AE0FB2C10A0AB0006C1E3 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8AE0FA2C10A0AB0006C1E3 /* HomeScreenViewModel.swift */; };
 		EB8DC6B22C0E4A6300A5E4F6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DC6B12C0E4A6300A5E4F6 /* Endpoint.swift */; };
 		EB8DC6B42C0E52ED00A5E4F6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DC6B32C0E52ED00A5E4F6 /* NetworkManager.swift */; };
 		EB8DC6B92C0E584F00A5E4F6 /* Weakifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DC6B82C0E584F00A5E4F6 /* Weakifiable.swift */; };
@@ -47,11 +56,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB2C77152C11C69F004550CB /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		EB2C77172C120457004550CB /* GameBodyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBodyCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB2C77192C120D36004550CB /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
+		EB2C771C2C121560004550CB /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		EB53D4572C13627D00997CC2 /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		EB8AE0E72C1091A30006C1E3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		EB8AE0E92C1096B10006C1E3 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		EB8AE0EF2C10985B0006C1E3 /* L10N.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10N.swift; sourceTree = "<group>"; };
 		EB8AE0F12C1099820006C1E3 /* BaseViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerDelegate.swift; sourceTree = "<group>"; };
 		EB8AE0F32C109A290006C1E3 /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
+		EB8AE0F62C109D590006C1E3 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		EB8AE0F82C109DB50006C1E3 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		EB8AE0FA2C10A0AB0006C1E3 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		EB8DC6B12C0E4A6300A5E4F6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		EB8DC6B32C0E52ED00A5E4F6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EB8DC6B82C0E584F00A5E4F6 /* Weakifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weakifiable.swift; sourceTree = "<group>"; };
@@ -78,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB53D4532C1356E400997CC2 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB2C771B2C121546004550CB /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EB2C771C2C121560004550CB /* CircularProgressView.swift */,
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
 		EB8AE0E62C1091780006C1E3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +138,42 @@
 				EB8AE0EF2C10985B0006C1E3 /* L10N.swift */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		EB8AE0F52C109D450006C1E3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EB8AE0F62C109D590006C1E3 /* UIView+Ext.swift */,
+				EB8AE0F82C109DB50006C1E3 /* UIViewController+Ext.swift */,
+				EB2C77152C11C69F004550CB /* Date+Ext.swift */,
+				EB2C77192C120D36004550CB /* CGFloat+Ext.swift */,
+				EB53D4572C13627D00997CC2 /* UIFont+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EB8AE0FC2C10A0C40006C1E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EBFF2D772C0D0086006288ED /* HomeScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB8AE0FD2C10A0CD0006C1E3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB8AE0FA2C10A0AB0006C1E3 /* HomeScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EB8AE0FE2C10A5B30006C1E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EB2C77172C120457004550CB /* GameBodyCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EB8DC6B02C0E4A4700A5E4F6 /* Service */ = {
@@ -157,6 +219,7 @@
 		EBFF2D3D2C0CFC4A006288ED /* GameMarket */ = {
 			isa = PBXGroup;
 			children = (
+				EB8AE0FE2C10A5B30006C1E3 /* Views */,
 				EBFF2D7C2C0D013A006288ED /* Utilities */,
 				EBFF2D7B2C0D00B2006288ED /* Support */,
 				EBFF2D712C0CFFDD006288ED /* Controllers */,
@@ -203,7 +266,8 @@
 		EBFF2D732C0D0015006288ED /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				EBFF2D772C0D0086006288ED /* HomeScreenViewController.swift */,
+				EB8AE0FD2C10A0CD0006C1E3 /* ViewModel */,
+				EB8AE0FC2C10A0C40006C1E3 /* View */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -230,6 +294,8 @@
 		EBFF2D7C2C0D013A006288ED /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EB2C771B2C121546004550CB /* CustomComponents */,
+				EB8AE0F52C109D450006C1E3 /* Extensions */,
 				EB8AE0EE2C10984C0006C1E3 /* Localization */,
 				EB8AE0E62C1091780006C1E3 /* Model */,
 				EB8DC6B52C0E582A00A5E4F6 /* Base */,
@@ -272,6 +338,9 @@
 			dependencies = (
 			);
 			name = GameMarket;
+			packageProductDependencies = (
+				EB53D4522C1356E400997CC2 /* Kingfisher */,
+			);
 			productName = GameMarket;
 			productReference = EBFF2D3B2C0CFC4A006288ED /* GameMarket.app */;
 			productType = "com.apple.product-type.application";
@@ -344,6 +413,9 @@
 				Base,
 			);
 			mainGroup = EBFF2D322C0CFC4A006288ED;
+			packageReferences = (
+				EB53D4512C1356E400997CC2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = EBFF2D3C2C0CFC4A006288ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -386,13 +458,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB2C77182C120457004550CB /* GameBodyCollectionViewCell.swift in Sources */,
+				EB8AE0F72C109D590006C1E3 /* UIView+Ext.swift in Sources */,
+				EB8AE0FB2C10A0AB0006C1E3 /* HomeScreenViewModel.swift in Sources */,
 				EB8DC6B42C0E52ED00A5E4F6 /* NetworkManager.swift in Sources */,
+				EB8AE0F92C109DB50006C1E3 /* UIViewController+Ext.swift in Sources */,
 				EBFF2D492C0CFC4A006288ED /* GameMarket.xcdatamodeld in Sources */,
 				EB8DC6B92C0E584F00A5E4F6 /* Weakifiable.swift in Sources */,
 				EBFF2D7A2C0D0093006288ED /* FavoriteScreenViewController.swift in Sources */,
 				EB8DC6B22C0E4A6300A5E4F6 /* Endpoint.swift in Sources */,
 				EBFF2D3F2C0CFC4A006288ED /* AppDelegate.swift in Sources */,
+				EB2C771D2C121560004550CB /* CircularProgressView.swift in Sources */,
+				EB53D4582C13627D00997CC2 /* UIFont+Ext.swift in Sources */,
+				EB2C77162C11C69F004550CB /* Date+Ext.swift in Sources */,
 				EB8AE0E82C1091A30006C1E3 /* Game.swift in Sources */,
+				EB2C771A2C120D36004550CB /* CGFloat+Ext.swift in Sources */,
 				EBFF2D762C0D0045006288ED /* TabBarViewController.swift in Sources */,
 				EBFF2D802C0D01BE006288ED /* AppConstants.swift in Sources */,
 				EB8AE0F42C109A290006C1E3 /* BaseViewModelDelegate.swift in Sources */,
@@ -747,6 +827,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB53D4512C1356E400997CC2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EB53D4522C1356E400997CC2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB53D4512C1356E400997CC2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		EBFF2D472C0CFC4A006288ED /* GameMarket.xcdatamodeld */ = {

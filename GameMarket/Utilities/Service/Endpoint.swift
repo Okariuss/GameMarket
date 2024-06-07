@@ -15,6 +15,7 @@ enum NetworkError: Error {
 protocol EndpointProtocol {
     var baseURL: String { get }
     var path: String { get }
+    var apiKey: String { get }
     var method: HTTPMethod { get }
     var headers: [String: String] { get }
 
@@ -42,8 +43,12 @@ extension Endpoint: EndpointProtocol {
     var path: String {
         switch self {
         case .getGames:
-            return AppConstants.NetworkConstants.games.rawValue + AppConstants.NetworkConstants.apiKey.rawValue
+            return AppConstants.NetworkConstants.games.rawValue + AppConstants.NetworkConstants.date
         }
+    }
+    
+    var apiKey: String {
+        return AppConstants.NetworkConstants.apiKey.rawValue
     }
 
     var method: HTTPMethod {
@@ -58,7 +63,7 @@ extension Endpoint: EndpointProtocol {
     }
 
     func request() async throws -> URLRequest {
-        guard let url = URL(string: baseURL + path) else {
+        guard let url = URL(string: baseURL + path + apiKey) else {
             fatalError("Invalid URL")
         }
         var request = URLRequest(url: url)

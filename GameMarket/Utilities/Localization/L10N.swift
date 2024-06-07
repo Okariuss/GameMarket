@@ -11,4 +11,5 @@ final class L10N {
     private init() {}
     
     static let alertOk = "OK"
+    static let alertError = "Error"
 }
