@@ -46,7 +46,7 @@ final class NetworkManager: Weakifiable {
     private func startMonitoring() {
         
         monitor.pathUpdateHandler = weakify { (self, path) in
-            self.isConnectedToWiFi = path.usesInterfaceType(.wifi)
+            self.isConnectedToWiFi = path.status == .satisfied
         }
             
         let queue = DispatchQueue(label: "NetworkMonitor")
