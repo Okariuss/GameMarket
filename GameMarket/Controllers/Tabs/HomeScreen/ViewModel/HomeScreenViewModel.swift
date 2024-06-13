@@ -9,6 +9,7 @@ import Foundation
 
 protocol HomeScreenViewModelDelegate: BaseViewModelDelegate {
     var games: [Game] { get set }
+    var topGames: [Game] { get set }
     func fetchGames()
     func getGame(indexPath: IndexPath)
 }
@@ -17,6 +18,7 @@ final class HomeScreenViewModel<T: HomeScreenViewControllerDelegate> {
     weak var view: T?
     private var networkManager: NetworkManager
     private var _games: [Game] = []
+    private var _topGames: [Game] = []
     
     init(_ networkManager: NetworkManager = NetworkManager.shared) {
         self.networkManager = networkManager
@@ -30,6 +32,15 @@ extension HomeScreenViewModel: HomeScreenViewModelDelegate {
         }
         set {
             _games = newValue
+        }
+    }
+    
+    var topGames: [Game] {
+        get {
+            _topGames
+        }
+        set {
+            _topGames = newValue
         }
     }
     
@@ -49,6 +60,7 @@ extension HomeScreenViewModel: HomeScreenViewModelDelegate {
                 if let parsedGames = try? JSONDecoder().decode(Games.self, from: data) {
                     DispatchQueue.main.async {
                         self.games = parsedGames.results
+                        self.topGames = self.getTopGames()
                         self.view?.stopSpinner()
                         self.view?.reloadData()
                     }
@@ -76,5 +88,9 @@ extension HomeScreenViewModel: HomeScreenViewModelDelegate {
     func viewDidLoad() {
         fetchGames()
         view?.configure()
+    }
+    
+    private func getTopGames() -> [Game] {
+        return Array(games.shuffled().prefix(5))
     }
 }

@@ -82,10 +82,46 @@ extension UIViewController {
     ///   - lineSpacing: The spacing between lines in the collection view.
     ///
     /// - Returns: A configured UICollectionViewFlowLayout instance.
-    func addCollectionViewLayout(width: CGFloat, height: CGFloat, lineSpacing: AppConstants.Spacing) -> UICollectionViewFlowLayout {
+    func addCollectionViewLayout(width: CGFloat, height: CGFloat, lineSpacing: AppConstants.Spacing, scrollDirection: UICollectionView.ScrollDirection = .vertical) -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: width, height: height)
         layout.minimumLineSpacing = lineSpacing.rawValue
+        layout.scrollDirection = scrollDirection
         return layout
+    }
+    
+    /// Creates and configures an NSCollectionLayoutSection with specified item and group sizes, scroll direction, padding, and spacing.
+    ///
+    /// - Parameters:
+    ///   - itemWidthPercentage: The width of the item as a fraction of the group's width.
+    ///   - itemHeightPercentage: The height of the item as a fraction of the group's height.
+    ///   - groupWidthPercentage: The width of the group as a fraction of the section's width.
+    ///   - groupHeightPercentage: The height of the group as a fraction of the section's height.
+    ///   - scrollDirection: The scroll direction of the section (horizontal or vertical).
+    ///   - padding: The padding to apply around the section.
+    ///   - spacing: The spacing between groups in the section.
+    ///
+    /// - Returns: A configured NSCollectionLayoutSection instance.
+    func createSection(itemWidthPercentage: CGFloat, itemHeightPercentage: CGFloat, groupWidthPercentage: CGFloat, groupHeightPercentage: CGFloat, scrollDirection: ScrollDirection, padding: AppConstants.Spacing, spacing: AppConstants.Spacing) -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(itemWidthPercentage), heightDimension: .fractionalHeight(itemHeightPercentage))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(groupWidthPercentage), heightDimension: .fractionalHeight(groupHeightPercentage))
+        let group: NSCollectionLayoutGroup
+        switch scrollDirection {
+        case .horizontal:
+            group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        case .vertical:
+            group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        }
+        
+        let section = NSCollectionLayoutSection(group: group)
+        if scrollDirection == .horizontal {
+            section.orthogonalScrollingBehavior = .continuous
+        }
+        section.contentInsets = NSDirectionalEdgeInsets(top: padding.rawValue, leading: padding.rawValue, bottom: padding.rawValue, trailing: padding.rawValue)
+        section.interGroupSpacing = spacing.rawValue
+        
+        return section
     }
 }

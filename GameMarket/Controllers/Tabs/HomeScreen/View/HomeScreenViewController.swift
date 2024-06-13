@@ -19,16 +19,27 @@ final class HomeScreenViewController: UIViewController {
     
     private lazy var spinner = addSpinner(size: .large)
     
-    private lazy var collectionViewLayout = addCollectionViewLayout(width: .dWidth * 0.95, height: .dHeight / 8, lineSpacing: .medium)
-    
-    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
-
     private lazy var viewModel: HomeScreenViewModel<HomeScreenViewController> = HomeScreenViewModel()
+    
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.view = self
         viewModel.viewDidLoad()
+    }
+    
+    private func createLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { sectionIndex, environment -> NSCollectionLayoutSection? in
+            guard let section = Section(rawValue: sectionIndex) else { return nil }
+            switch section {
+            case .topGames:
+                return self.createSection(itemWidthPercentage: 0.95, itemHeightPercentage: 1.0, groupWidthPercentage: 0.9, groupHeightPercentage: 0.4, scrollDirection: .horizontal, padding: .medium, spacing: .none)
+            case .allGames:
+                return self.createSection(itemWidthPercentage: 1.0, itemHeightPercentage: 1.0, groupWidthPercentage: 1.0, groupHeightPercentage: 0.15, scrollDirection: .vertical, padding: .medium, spacing: .small)
+            }
+        }
+        return layout
     }
 }
 
@@ -51,12 +62,11 @@ extension HomeScreenViewController: HomeScreenViewControllerDelegate {
     }
     
     func configureCollectionView() {
-        
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.register(GameHeaderCollectionViewCell.self, forCellWithReuseIdentifier: GameHeaderCollectionViewCell.identifier)
         collectionView.register(GameBodyCollectionViewCell.self, forCellWithReuseIdentifier: GameBodyCollectionViewCell.identifier)
         view.addSubviews(collectionView)
-        
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
@@ -73,7 +83,7 @@ extension HomeScreenViewController: HomeScreenViewControllerDelegate {
     }
     
     func navigateScreen(_ vc: UIViewController) {
-        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func reloadData() {
@@ -83,16 +93,34 @@ extension HomeScreenViewController: HomeScreenViewControllerDelegate {
     }
 }
 
-extension HomeScreenViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension HomeScreenViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return Section.allCases.count
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.games.count
+        switch Section(rawValue: section)! {
+        case .topGames:
+            return viewModel.topGames.count
+        case .allGames:
+            return viewModel.games.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GameBodyCollectionViewCell.identifier, for: indexPath) as? GameBodyCollectionViewCell else {
-            return UICollectionViewCell()
+        switch Section(rawValue: indexPath.section)! {
+        case .topGames:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GameHeaderCollectionViewCell.identifier, for: indexPath) as? GameHeaderCollectionViewCell else {
+                fatalError("Unable to dequeue GameHeaderCollectionViewCell")
+            }
+            cell.configure(with: viewModel.topGames[indexPath.row])
+            return cell
+        case .allGames:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GameBodyCollectionViewCell.identifier, for: indexPath) as? GameBodyCollectionViewCell else {
+                fatalError("Unable to dequeue GameBodyCollectionViewCell")
+            }
+            cell.configure(with: viewModel.games[indexPath.row])
+            return cell
         }
-        cell.configure(with: viewModel.games[indexPath.row])
-        return cell
     }
 }

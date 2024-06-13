@@ -69,6 +69,8 @@ final class AppConstants {
     
     // MARK: Spaces
     enum Spacing: CGFloat {
+        /// No spacing
+        case none = 0
         /// Small spacing (8)
         case small = 8
         /// Medium spacing (16)
