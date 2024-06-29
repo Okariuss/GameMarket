@@ -33,6 +33,9 @@ final class AppConstants {
         
         // paths
         case games = "games"
+        case search = "&search="
+        case metaCritic = "&metacritic=1,100"
+        case searchPrecise = "&seacrh_precise=true"
         static var date: String {
             return "?dates=1900-01-01,\(Date().toYYYYMMDD())"
         }

@@ -51,6 +51,7 @@ final class GameBodyCollectionViewCell: UICollectionViewCell {
                         
             nameLabel.topAnchor.constraint(equalTo: gameImageView.topAnchor, constant: AppConstants.Spacing.small.rawValue),
             nameLabel.leadingAnchor.constraint(equalTo: gameImageView.trailingAnchor, constant: AppConstants.Spacing.small.rawValue),
+            nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -AppConstants.Spacing.small.rawValue),
             
             releasedLabel.bottomAnchor.constraint(equalTo: gameImageView.bottomAnchor, constant: -AppConstants.Spacing.small.rawValue),
             releasedLabel.leadingAnchor.constraint(equalTo: gameImageView.trailingAnchor, constant: AppConstants.Spacing.small.rawValue),
