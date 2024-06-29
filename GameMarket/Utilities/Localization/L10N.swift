@@ -10,6 +10,10 @@ import Foundation
 final class L10N {
     private init() {}
     
+    // MARK: - Alert Constants
     static let alertOk = "OK"
     static let alertError = "Error"
+    
+    // MARK: - Search Bar Placeholder
+    static let searchBarPlaceholder = "Search Games"
 }

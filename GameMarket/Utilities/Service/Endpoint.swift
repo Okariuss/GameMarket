@@ -32,6 +32,7 @@ enum HTTPMethod: String {
 
 enum Endpoint {
     case getGames
+    case searchGame(query: String)
 }
 
 extension Endpoint: EndpointProtocol {
@@ -44,6 +45,8 @@ extension Endpoint: EndpointProtocol {
         switch self {
         case .getGames:
             return AppConstants.NetworkConstants.games.rawValue + AppConstants.NetworkConstants.date
+        case .searchGame(let query):
+            return AppConstants.NetworkConstants.games.rawValue + AppConstants.NetworkConstants.date + AppConstants.NetworkConstants.search.rawValue + query + AppConstants.NetworkConstants.searchPrecise.rawValue + AppConstants.NetworkConstants.metaCritic.rawValue
         }
     }
     
@@ -53,7 +56,7 @@ extension Endpoint: EndpointProtocol {
 
     var method: HTTPMethod {
         switch self {
-        case .getGames:
+        case .getGames, .searchGame:
             return .get
         }
     }

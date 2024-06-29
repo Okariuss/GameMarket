@@ -124,4 +124,15 @@ extension UIViewController {
         
         return section
     }
+    
+    // MARK: - Search Bar
+    
+    /// Creates a UISearchBar instance.
+    ///
+    /// - Returns: A UISearchBar instance.
+    func addSearchBar(placeholder: String) -> UISearchBar {
+        let searchBar = UISearchBar()
+        searchBar.placeholder = placeholder
+        return searchBar
+    }
 }
